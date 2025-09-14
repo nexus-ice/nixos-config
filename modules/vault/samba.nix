@@ -12,13 +12,7 @@ Samba
 				"force user" = "corum";
 				"guest account" = "corum";
     			};
-    			nixconfig = {
-      				"path" = "/home/corum/.nixconfig";
-      				"browseable" = "yes";
-      				"writeable" = "yes";
-      				"guest ok" = "yes";
-    			};
-				Storage =  {
+			Storage =  {
       				"path" = "/mnt/pool/";
       				"browseable" = "yes";
       				"writeable" = "yes";
