@@ -12,7 +12,6 @@
 		./ssh.nix
 		./packages.nix
 		./git.nix
-		./aliases.nix
 		./hosts.nix
 		
 	];
