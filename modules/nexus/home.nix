@@ -2,7 +2,7 @@
 {
 	home.username = "corum";
 	home.homeDirectory = "/home/corum";
-	home.packages = with pkgs; [ keepassxc github-desktop ];
+	home.packages = with pkgs; [ keepassxc github-desktop thunderbird ];
 	dconf.settings = {
 		"org/gnome/desktop/interface" = {
 			color-scheme = "prefer-dark";
