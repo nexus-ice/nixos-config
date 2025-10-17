@@ -6,7 +6,6 @@
       		../default #Include default config
       		./gnome.nix
       		./sound.nix
-      		./packages.nix
       		./printing.nix
     	];
     	
