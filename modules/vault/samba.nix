@@ -11,12 +11,18 @@ Samba
  				"workgroup" = "WORKGROUP";
 				"force user" = "corum";
 				"guest account" = "corum";
+				"map to guest" = "Bad User";
     			};
 			Storage =  {
       				"path" = "/mnt/pool/";
       				"browseable" = "yes";
       				"writeable" = "yes";
+				"public" = "yes";
       				"guest ok" = "yes";
+				"force user" = "corum";
+				"force group" = "users";
+				"create mask" = "666";
+				"directory mask" = "777";
     			};
   		};
   	};
@@ -26,6 +32,6 @@ Samba
 		openFirewall = true;
 	};
 	
-	networking.firewall.enable = true;
+	networking.firewall.enable = false;
 	networking.firewall.allowPing = true;
 }
