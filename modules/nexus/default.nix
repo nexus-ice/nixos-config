@@ -7,6 +7,10 @@
       		./gnome.nix
       		./sound.nix
       		./printing.nix
+      		./docker.nix
+      		./jellyfin.nix
+      		./audiobookshelf.nix
+      		./olivetin.nix
     	];
     	
     	networking.hostName = "nexus"; # Define your hostname.
