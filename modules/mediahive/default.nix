@@ -5,6 +5,9 @@
       		./hardware-configuration.nix # Include the results of the hardware scan.
       		../default #Include default config
 		./network.nix
+		./filesystem.nix
+		./samba.nix
+		./jellyfin.nix
     	];
     	
     	networking.hostName = "mediahive"; # Define your hostname.
