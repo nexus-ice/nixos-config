@@ -8,6 +8,8 @@
 		./filesystem.nix
 		./samba.nix
 		./jellyfin.nix
+		#./olivetin.nix
+		./audiobookshelf.nix
     	];
     	
     	networking.hostName = "mediahive"; # Define your hostname.
