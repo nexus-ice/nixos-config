@@ -9,6 +9,10 @@
   		title = "Hello world!";
     		shell = "echo 'Hello World!'";
     		}
+    		{
+  		title = "Hello world!2";
+    		shell = "echo 'Hello World!'";
+    		}
     	];
     };
   };
