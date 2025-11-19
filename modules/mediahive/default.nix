@@ -8,7 +8,7 @@
 		./filesystem.nix
 		./samba.nix
 		./jellyfin.nix
-		#./olivetin.nix
+		./docker.nix
 		./audiobookshelf.nix
     	];
     	
