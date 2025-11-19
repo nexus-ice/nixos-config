@@ -7,6 +7,7 @@
       		./samba.nix
       		./filesystem.nix
       		./network.nix
+      		./docker.nix
     	];
     	
     	networking.hostName = "vault"; # Define your hostname.
