@@ -8,5 +8,7 @@
   		github-desktop
   		thunderbird
   		neofetch
+  		jdk11
+  		openjfx24
   	];
 }
