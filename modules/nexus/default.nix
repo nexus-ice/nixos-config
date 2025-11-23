@@ -7,10 +7,8 @@
       		./gnome.nix
       		./sound.nix
       		./printing.nix
-      		./docker.nix
-      		./jellyfin.nix
-      		./audiobookshelf.nix
-      		./olivetin.nix
+      		./systemTimeLocal.nix
+      		./packages.nix
     	];
     	
     	networking.hostName = "nexus"; # Define your hostname.
@@ -18,7 +16,4 @@
   	# Bootloader.
   	boot.loader.systemd-boot.enable = true;
   	boot.loader.efi.canTouchEfiVariables = true;
-  	
-  	time.hardwareClockInLocalTime = true;
-
 }
