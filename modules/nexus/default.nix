@@ -8,7 +8,7 @@
       		./sound.nix
       		./printing.nix
       		./systemTimeLocal.nix
-      		./packages.nix
+      		#./packages.nix
     	];
     	
     	networking.hostName = "nexus"; # Define your hostname.
