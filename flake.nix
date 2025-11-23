@@ -19,7 +19,7 @@
       					{
 						home-manager.useGlobalPkgs = true;
 						home-manager.useUserPackages = true;
-						home-manager.users.corum = import ./modules/nexus/home.nix;
+						home-manager.users.corum = import ./modules/nexus/home;
 					}
       				];
     			};
