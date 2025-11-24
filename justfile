@@ -33,3 +33,9 @@ vault:
 # Build Host MediaHive
 mediahive:
 	nixos-rebuild switch --flake .#mediahive --target-host root@mediahive
+
+# Build all Hosts
+hosts: vault mediahive
+
+# Build all Systems
+all: deploy vault mediahive
