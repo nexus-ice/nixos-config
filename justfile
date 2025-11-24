@@ -8,7 +8,7 @@ deploy:
 
 # Debug Build System
 debug:
-	nixos-rebuild switch --flake . --show-trace --verbose
+	sudo nixos-rebuild switch --flake . --show-trace --verbose
 
 # Update Flake
 up:
@@ -24,4 +24,12 @@ clean:
   
 # garbage collect all unused nix store entries
 gc:
-	sudo nix-collect-garbage --delete-old
+	nix-collect-garbage --delete-old
+
+# Build Host Vault
+vault:
+	nixos-rebuild switch --flake .#vault --target-host root@vault
+	
+# Build Host MediaHive
+mediahive:
+	nixos-rebuild switch --flake .#mediahive --target-host root@mediahive

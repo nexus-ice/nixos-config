@@ -26,13 +26,25 @@
     			vault = nixpkgs.lib.nixosSystem {
       				system = "x86_64-linux";
       				modules = [ 
-      					./modules/vault 
+      					./modules/vault
+      					home-manager.nixosModules.home-manager
+      					{
+						home-manager.useGlobalPkgs = true;
+						home-manager.useUserPackages = true;
+						home-manager.users.corum = import ./modules/vault/home;
+					}
       				];
     			};
 			mediahive = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
                                 modules = [
                                         ./modules/mediahive
+                                        home-manager.nixosModules.home-manager
+      					{
+						home-manager.useGlobalPkgs = true;
+						home-manager.useUserPackages = true;
+						home-manager.users.corum = import ./modules/mediahive/home;
+					}
                                 ];
 			};
   		};
