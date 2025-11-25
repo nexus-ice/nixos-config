@@ -1,12 +1,5 @@
-/*
-filesystem
-*/
-{ pkgs, lib, config, ... }:
 {
-	environment.systemPackages = with pkgs; [
-		mergerfs
-	];
-	
+
 	fileSystems."/mnt/HDD1" = {
 		device = "/dev/disk/by-uuid/19a0fa3c-178f-4acc-a089-aa9506d76d70";
 		fsType = "ext4";
@@ -35,11 +28,5 @@ filesystem
 	fileSystems."/mnt/HDD6" = {
 		device = "/dev/disk/by-uuid/0cf68225-3b91-4c7a-b250-e42bc999cd5d";
 		fsType = "ext4";
-	};
-
-	fileSystems."/mnt/pool" = {
-		fsType = "fuse.mergerfs";
-		device = "/mnt/HDD*";
-		options = ["defaults" "allow_other"];
 	};
 }

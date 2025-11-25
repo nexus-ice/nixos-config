@@ -1,7 +1,3 @@
-/*
-Samba
-*/
-{ pkgs, lib, ... }:
 {
 	services.samba = { 
 		enable = true;
@@ -21,12 +17,11 @@ Samba
     			};
   		};
   	};
-
 	services.samba-wsdd = {
 		enable = true;
 		openFirewall = true;
 	};
-	
+
 	networking.firewall.enable = true;
 	networking.firewall.allowPing = true;
 }
