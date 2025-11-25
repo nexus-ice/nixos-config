@@ -1,10 +1,5 @@
-{ config, pkgs, ... }:
 {
-	home.username = "corum";
-	home.homeDirectory = "/home/corum";
 	imports = [ 
-      		./neofetch.nix
+      		../../default/home #Include default config
     	];
-	
-	home.stateVersion = "25.05";
 }
