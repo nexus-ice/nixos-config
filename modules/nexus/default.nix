@@ -1,4 +1,3 @@
-# Config for host nexus
 {
 	imports = [ 
       		./hardware-configuration.nix # Include the results of the hardware scan.
@@ -9,5 +8,6 @@
       		./sound.nix
       		./printing.nix
       		./systemTimeLocal.nix
+      		./flatpak.nix
     	];
 }
