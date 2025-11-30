@@ -17,22 +17,20 @@
   	systemd.services."getty@tty1".enable = false;
   	systemd.services."autovt@tty1".enable = false;
   	environment.gnome.excludePackages = (with pkgs; [
-		atomix # puzzle game
-		cheese # webcam tool
-		epiphany # web browser
-		evince # document viewer
-		geary # email reader
-		gedit # text editor
-		gnome-characters
-		gnome-music
-		gnome-photos
-		#gnome-terminal
-		gnome-tour
+		yelp		# help viewer
+		epiphany    	# web browser		
+		geary 		# email client
+		snapshot 	# Camera tool
+		decibels 	# audio player
+		simple-scan 	# document scanner
+		totem 		# video player
 		gnome-maps
-		hitori # sudoku game
-		iagno # go game
-		tali # poker game
-		totem # video player
-		yelp # help viewer
+		gnome-tour		
+		gnome-contacts
+		gnome-weather
+		gnome-music
+		gnome-clocks		
+		gnome-characters
+		gnome-calendar
 	]);
 }
