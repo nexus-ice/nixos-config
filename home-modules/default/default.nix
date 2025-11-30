@@ -1,5 +1,3 @@
 {
-	imports = [ 
-      		./neofetch.nix
-      	];
+	imports = [ ];
 }
