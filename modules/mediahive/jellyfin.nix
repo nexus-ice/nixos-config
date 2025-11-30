@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ var , pkgs , ... }:
 {
 	services.jellyfin = {
     		enable = true;
     		openFirewall = true;
-    		user = "corum";
+    		user = "${var.user}";
     		group = "users";
   		};
   	environment.systemPackages = [

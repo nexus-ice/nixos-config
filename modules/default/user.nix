@@ -1,10 +1,7 @@
-{pkgs, ...}:
-{
-  	users.users.corum = {
+{var , pkgs , ...}:{
+  	users.users.${var.user} = {
     		isNormalUser = true;
-    		description = "corum";
     		extraGroups = [ "networkmanager" "wheel" ];
-    		packages = with pkgs; [ ];
   	};
-  	
+  	home-manager.users."${var.user}" = import ../../home-modules;
 }

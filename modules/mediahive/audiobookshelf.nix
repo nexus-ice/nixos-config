@@ -1,8 +1,8 @@
-{
+{ var , ... }:{
   	services.audiobookshelf = {
     		enable = true;
     		host = "192.168.2.2";
-    		user = "corum";
+    		user = "${var.user}";
     		group = "users";
     		port = 15000;
     		openFirewall = true;

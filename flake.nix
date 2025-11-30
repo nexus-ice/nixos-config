@@ -8,44 +8,59 @@
 		};
 
 
-  	};
-  	outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  	};  	
+  	outputs = inputs@{ nixpkgs, home-manager, ... }: 
+  	let
+  			system = "x86_64-linux";
+  			user = "corum";
+  			base = "25.05";
+  	in
+  	{
     		nixosConfigurations = {
     			nexus = nixpkgs.lib.nixosSystem {
-      				system = "x86_64-linux";
-      				modules = [ 
-      					./modules/nexus
+      				inherit system;
+      				specialArgs = {
+        				inherit inputs;
+        				var = {
+          					inherit user;
+          					host = "nexus";
+          					inherit base;
+        				};
+        			};
+      				modules = [
+      					./configuration.nix
       					home-manager.nixosModules.home-manager
-      					{
-						home-manager.useGlobalPkgs = true;
-						home-manager.useUserPackages = true;
-						home-manager.users.corum = import ./modules/nexus/home;
-					}
       				];
     			};
     			vault = nixpkgs.lib.nixosSystem {
-      				system = "x86_64-linux";
-      				modules = [ 
-      					./modules/vault
+      				inherit system;
+      				specialArgs = {
+        				inherit inputs;
+        				var = {
+          					inherit user;
+          					host = "vault";
+          					inherit base;
+        				};
+        			};
+      				modules = [
+      					./configuration.nix
       					home-manager.nixosModules.home-manager
-      					{
-						home-manager.useGlobalPkgs = true;
-						home-manager.useUserPackages = true;
-						home-manager.users.corum = import ./modules/vault/home;
-					}
       				];
     			};
 			mediahive = nixpkgs.lib.nixosSystem {
-				system = "x86_64-linux";
-                                modules = [
-                                        ./modules/mediahive
-                                        home-manager.nixosModules.home-manager
-      					{
-						home-manager.useGlobalPkgs = true;
-						home-manager.useUserPackages = true;
-						home-manager.users.corum = import ./modules/mediahive/home;
-					}
-                                ];
+				inherit system;
+      				specialArgs = {
+        				inherit inputs;
+        				var = {
+          					inherit user;
+          					host = "mediahive";
+          					inherit base;
+        				};
+        			};
+      				modules = [
+      					./configuration.nix
+      					home-manager.nixosModules.home-manager
+      				];
 			};
   		};
   	};

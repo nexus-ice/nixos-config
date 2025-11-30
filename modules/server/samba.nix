@@ -1,11 +1,11 @@
-{
+{ var , ... }:{
 	services.samba = { 
 		enable = true;
 		openFirewall = true;
 		settings = {
   			global = {
  				"workgroup" = "WORKGROUP";
-				"force user" = "corum";
+				"force user" = "${var.user}";
 				"map to guest" = "Bad User";
     			};
 			Storage =  {
@@ -22,6 +22,5 @@
 		openFirewall = true;
 	};
 
-	networking.firewall.enable = true;
 	networking.firewall.allowPing = true;
 }
