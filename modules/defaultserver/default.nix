@@ -3,6 +3,6 @@
 		./pool.nix
       		./samba.nix
       		./docker.nix
-      		#./olivetin_docker.nix
+      		./docker_olivetin.nix
     	];
 }
