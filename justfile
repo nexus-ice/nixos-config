@@ -3,7 +3,7 @@ default:
 	@just --list
 
 # Build System
-deploy: gitadd
+deploy:
 	sudo nixos-rebuild switch --flake .
 
 # Debug Build System
@@ -41,5 +41,7 @@ hosts: vault mediahive
 all: deploy vault mediahive
 
 # add new files to git
-gitadd:
-	git add .
+build:
+	git fetch
+	git pull
+	sudo nixos-rebuild switch --flake .
