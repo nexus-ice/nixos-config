@@ -1,7 +1,4 @@
-{ var , pkgs , ... }:
+{ var , ... }:
 {
-	home.packages = with pkgs; [ neofetch ];
-	programs.bash.enable = true;
-  	programs.bash.initExtra = ''${pkgs.neofetch}/bin/neofetch'';
-  	xdg.configFile."neofetch/config.conf".source = ../../dotfiles/defaultserver/neofetch/config.conf;
+	home.file."docker/olivetin/config/config.yaml".source = /home/${var.user}/nixos-config/dotfiles/${var.host}/olivetin/config.yaml;
 }
