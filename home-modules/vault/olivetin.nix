@@ -1,4 +1,4 @@
 { var , ... }:
 {
-	home.file."docker/olivetin/config/config.yaml".target = ../../dotfiles/${var.host}/olivetin/config.yaml;
+	home.file."docker/olivetin/config/config.yaml".source = ../../dotfiles/${var.host}/olivetin/config.yaml;
 }
