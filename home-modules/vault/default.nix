@@ -1,5 +1,6 @@
 {
 	imports = [ 
 		../defaultserver
+		./olivetin.nix
     	];
 }
