@@ -7,5 +7,6 @@
 		./filesystem.nix
 		./jellyfin.nix
 		./audiobookshelf.nix
+		./docker.nix
     	];
 }
