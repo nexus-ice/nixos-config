@@ -1,0 +1,10 @@
+services:
+  olivetin:
+    container_name: olivetin
+    image: jamesread/olivetin
+    volumes:
+      - /home/corum/docker/olivetin/config:/config
+      - /home/corum/docker/olivetin/ssh:/ssh
+    ports:
+      - 10000:1337
+    restart: unless-stopped
