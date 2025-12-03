@@ -1,6 +1,6 @@
-pageTitle: Vault Dashboard
+pageTitle: Vault
 showNavigation: false
-showFooter: false
+showFooter: true
 actions:
   - title: "Shutdown Vault"
     shell: ssh -i /ssh/id_rsa root@192.168.2.3 'poweroff'
