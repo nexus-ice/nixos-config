@@ -1,0 +1,9 @@
+actions:
+  - title: "Shutdown MediaHive"
+    shell: ssh -i /ssh/id_rsa root@192.168.2.2 'poweroff'
+    icon: "&#128250;"
+    timeout: 10
+  - title: "Restart MediaHive"
+    shell: ssh -i /ssh/id_rsa root@192.168.2.2 'poweroff --reboot'
+    icon: "&#128250;"
+    timeout: 10
