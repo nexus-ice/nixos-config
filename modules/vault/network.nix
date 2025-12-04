@@ -10,7 +10,7 @@
     			};
   		};
   		defaultGateway.address = "192.168.2.1";
-  		nameservers = ["1.1.1.1"];
+  		nameservers = ["192.168.2.1"];
   		firewall = {
     			allowedUDPPorts = [ 9 ];
   		};
