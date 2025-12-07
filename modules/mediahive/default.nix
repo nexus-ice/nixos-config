@@ -8,5 +8,6 @@
 		./jellyfin.nix
 		./audiobookshelf.nix
 		./docker.nix
+		./kavita.nix
     	];
 }
