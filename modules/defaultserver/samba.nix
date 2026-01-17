@@ -6,7 +6,7 @@
   			global = {
  				"workgroup" = "WORKGROUP";
 				"force user" = "${var.user}";
-				"map to guest" = "Bad User";
+				"guest account" = "${var.user}";
     			};
 			Storage =  {
       				"path" = "/mnt/pool/";
