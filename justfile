@@ -40,7 +40,7 @@ hosts: vault mediahive
 # Build all Systems
 all: deploy vault mediahive
 
-# add new files to git
+# add new files from git
 build:
 	git fetch
 	git pull
