@@ -23,6 +23,7 @@
       				"guest ok" = "yes";
   		};
   	};
+  };
 	services.samba-wsdd = {
 		enable = true;
 		openFirewall = true;
