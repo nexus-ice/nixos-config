@@ -12,9 +12,16 @@
       				"path" = "/mnt/pool/";
       				"browseable" = "yes";
       				"writeable" = "yes";
-				"public" = "yes";
+				      "public" = "yes";
       				"guest ok" = "yes";
     			};
+  		};
+  		NixOs-Config = {
+  			      "path" = "/home/${var.user}/nixos-config/";
+      				"browseable" = "yes";
+      				"writeable" = "yes";
+				      "public" = "yes";
+      				"guest ok" = "yes";
   		};
   	};
 	services.samba-wsdd = {
