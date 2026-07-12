@@ -7,15 +7,14 @@
  				"workgroup" = "WORKGROUP";
 				"force user" = "${var.user}";
 				"guest account" = "${var.user}";
-    			};
+    	};
 			Storage =  {
       				"path" = "/mnt/pool/";
       				"browseable" = "yes";
       				"writeable" = "yes";
 				      "public" = "yes";
       				"guest ok" = "yes";
-    			};
-  		};
+    	};
   		NixOs-Config = {
   			      "path" = "/home/${var.user}/nixos-config/";
       				"browseable" = "yes";
