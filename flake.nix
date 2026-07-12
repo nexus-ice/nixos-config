@@ -1,11 +1,4 @@
-let
-  			system = "x86_64-linux";
-  			user = "corum";
-  			base = "25.05";
-  	in
 {
-	
-		
 	inputs = {
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
 		
@@ -17,6 +10,11 @@ let
 
   	};  	
   	outputs = inputs@{ nixpkgs, home-manager, ... }: 
+  	let
+  			system = "x86_64-linux";
+  			user = "corum";
+  			base = "25.05";
+  	in
   	{
     		nixosConfigurations = {
     			nexus = nixpkgs.lib.nixosSystem {
@@ -65,6 +63,6 @@ let
       				];
 			};
   		};
-  	};
-		
+		};
+  };
 }
