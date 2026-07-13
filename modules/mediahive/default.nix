@@ -8,6 +8,6 @@
 		./jellyfin.nix
 		./audiobookshelf.nix
 		./docker.nix
-		./adguardhome.nix
+		#./adguardhome.nix
   ];
 }
