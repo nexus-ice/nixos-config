@@ -6,6 +6,7 @@
             settings = {
               http = {
                 address = "0.0.0.0:3000";
+              };
             };
     };
 }
