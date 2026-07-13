@@ -10,4 +10,5 @@
             #};
     };
 	networking.firewall.allowedTCPPorts = [ 80 53 ];
+	services.resolved.enable = false;
 }
