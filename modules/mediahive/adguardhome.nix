@@ -1,4 +1,4 @@
-{ var , ... }:{
+{ config, pkgs, var, ... }:{
     services.adguardhome = {
             enable = true;
             openFirewall = true;
@@ -9,4 +9,5 @@
             #  };
             #};
     };
+	networking.firewall.allowedTCPPorts = [ 80 53 ];
 }
