@@ -7,4 +7,5 @@
 			LogLevel = "info";
 		};
 	};
+	networking.firewall.allowedTCPPorts = [ 4533 ];
 }
