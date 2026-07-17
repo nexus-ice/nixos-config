@@ -4,6 +4,7 @@
 		openFirewall = true; # Öffnet Port 4533 automatisch
 		settings = {
 			MusicFolder = "/mnt/pool/Musik";
+			Address = "0.0.0.0";
 			LogLevel = "info";
 		};
 	};
