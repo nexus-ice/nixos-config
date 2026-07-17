@@ -9,5 +9,6 @@
 		./audiobookshelf.nix
 		./docker.nix
 		./adguardhome.nix
+		./navidome.nix
   ];
 }
