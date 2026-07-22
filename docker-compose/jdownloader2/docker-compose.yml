@@ -1,0 +1,13 @@
+services:
+  jdownloader-2:
+    image: jlesage/jdownloader-2
+    container_name: jdownloader-2
+    environment:
+      - USER_ID=1000
+      - GROUP_ID=100
+    volumes:
+      - /home/corum/.docker/jdownloader2/config:/config:rw
+      - /mnt/pool/Downloads:/output:rw
+    ports:
+      - "5800:5800"
+    restart: unless-stopped
