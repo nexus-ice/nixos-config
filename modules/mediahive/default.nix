@@ -10,5 +10,6 @@
 		./docker.nix
 		./adguardhome.nix
 		./navidome.nix
+		./samba_hidden_share.nix
   ];
 }
