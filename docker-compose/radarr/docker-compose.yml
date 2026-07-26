@@ -1,0 +1,15 @@
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Etc/UTC+1
+    volumes:
+      - /home/corum/.docker/radarr/data:/config
+      - /mnt/pool/Filme:/movies #optional
+      - /mnt/pool/Downloads/Filme:/downloads #optional
+    ports:
+      - 7878:7878
+    restart: unless-stopped
