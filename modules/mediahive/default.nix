@@ -10,6 +10,6 @@
 		./docker.nix
 		./adguardhome.nix
 		./navidome.nix
-		./hidden_share
+		./hidden_share.nix
   ];
 }
