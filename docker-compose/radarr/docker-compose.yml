@@ -9,7 +9,7 @@ services:
     volumes:
       - /home/corum/.docker/radarr/data:/config
       - /mnt/pool/Filme:/movies #optional
-      - /mnt/pool/Downloads/Filme:/downloads #optional
+      - /mnt/pool/Downloads:/downloads #optional
     ports:
       - 7878:7878
     restart: unless-stopped

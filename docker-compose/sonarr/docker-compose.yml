@@ -9,7 +9,7 @@ services:
     volumes:
       - /home/corum/.docker/sonarr/data:/config
       - /mnt/pool/Serien:/tv #optional
-      - /mnt/pool/Downloads/Serien:/downloads #optional
+      - /mnt/pool/Downloads:/downloads #optional
     ports:
       - 8989:8989
     restart: unless-stopped
