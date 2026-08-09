@@ -4,7 +4,7 @@
         openFirewall = true;
         mutableSettings = true;
     };
-	networking.firewall.allowedTCPPorts = [ 80 53 ];
+	networking.firewall.allowedTCPPorts = [ 8080 53 ];
 	networking.firewall.allowedUDPPorts = [ 53 ];
 	services.resolved.enable = false;
 }
