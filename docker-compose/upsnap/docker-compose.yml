@@ -1,0 +1,15 @@
+services:
+  upsnap:
+    cap_add:
+      - NET_RAW # NET_RAW is required for privileged ping, network device scan and ip address tracking (nmap)
+    cap_drop:
+      - ALL
+    container_name: upsnap
+    image: ghcr.io/seriousm4x/upsnap:5 # images are also available on docker hub: seriousm4x/upsnap:5
+    network_mode: host # host is required for WOL magic packets
+    restart: unless-stopped
+    volumes:
+      - /home/corum/.docker/upsnap/data:/app/pb_data
+    environment:
+       - TZ=Europe/Berlin # Set container timezone for cron schedules
+       - UPSNAP_HTTP_LISTEN=0.0.0.0:8090

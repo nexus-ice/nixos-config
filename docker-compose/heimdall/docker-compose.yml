@@ -1,0 +1,15 @@
+services:
+  heimdall:
+    image: lscr.io/linuxserver/heimdall:latest
+    container_name: heimdall
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Etc/UTC+1
+      - ALLOW_INTERNAL_REQUESTS=false #optional
+    volumes:
+      - /home/corum/.docker/heimdall/config:/config
+    ports:
+      - 80:80
+      - 443:443
+    restart: unless-stopped
